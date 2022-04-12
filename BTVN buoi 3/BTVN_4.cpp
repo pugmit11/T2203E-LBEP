@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main (){
 	int n;
-	printf ("nhap sp n=");
+	printf ("nhap so n=");
 	scanf ("%d",&n);
 	int t=0;
 	while (n!=0){
