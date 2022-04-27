@@ -1,20 +1,26 @@
 #include <stdio.h>
 int main (){
 	int n;
-	printf (" nhap so n: ");
+	printf ("nhap n:");
 	scanf ("%d",&n);
-	int a[n];
-	for (int i=0; i<n; i++){
-		scanf ("%d",&a[i]);
-	}
-	int x=0;
-	int j=0;
+	int arr[n];
 	for (int i=0;i<n;i++){
-		if (a[i]%2!=0){
-			x+=a[i];
-				j++;
-		}
-		}
-	printf (" trung binh cong cua cac so le la %f",(float)x/j);
+	    bool f;
+	    do{
+	    	f=false;
+	    	printf ("nhap phan tu thu %d: ",i);
+	    	scanf ("%d ",&arr[i]);
+	    	// kiem tra xem cac so tu 0->i-1 da co gia tri arr[i]0 chua ?
+	    	for (int j=0;j<i;j++){
+	    		if (arr[j]==arr[i]){
+	    			f=true;
+	    			printf ("so nay da co vui lang nhap lai \n");
+	    			break;
+				}
+			}
+		}while(f);
 	}
-
+	for (int i=0;i<n;i++){
+		printf ("%d",arr[i]);
+	}
+}

@@ -9,6 +9,18 @@ int xMuy (int x, int y){
 	return s;
 }
 
+
+int timMax (int *p,int n){
+	int max =p[0];
+	for (int i=0;i<n;i++){
+		if (max<p[i]){
+			max=p[i];
+		}
+	}
+	return max;
+}
+
+
 bool checkSoNguyenTo(int number){
 	if(number < 2){
 		return false;
@@ -53,8 +65,8 @@ bool timUocchung(int size,int arr[],int value){
 
 int uocChunglonnhat (int arr[], int size){
 	int result = 0;
-	
-	for (int i=1;i<=arr[0];i++){
+	int m=arr[0]?arr[0]:-arr[0];
+	for (int i=1;i<=m;i++){
 		if(timUocchung(size, arr, i)&&i>result){
 			result=i;
 		}
@@ -62,4 +74,23 @@ int uocChunglonnhat (int arr[], int size){
 	
 	return result;
 }
+
+
+int timBCNN (int *p, int n){
+	int m=p[0]>0?p[0]:-p[0];
+	for (int i= m;;i++){
+		bool f=true;
+		for(int j=0;j<n;j++){
+			if (i%p[i]!=0){
+				f=false;
+				break; 
+			}
+		}
+		if(f){
+			return i; 
+		} 
+	} 
+	return 0;
+}
+
 

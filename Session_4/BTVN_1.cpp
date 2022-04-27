@@ -6,10 +6,11 @@ int main (){
 	int t=0;
 	int i=1;
 	
-	while (i<n){
+	while (i<=n){
 		if (n%i==0)
 		    t+=i;
-	    	i++; 
+		    printf (" cac uoc cua n la %d\n",i);
+	    	i++;
 	}
 	printf ("tong cac uoc cua %d la: %d",n,t); 
 }

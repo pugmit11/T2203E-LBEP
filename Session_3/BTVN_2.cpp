@@ -1,14 +1,17 @@
 #include <stdio.h>
 int main (){
 	int n;
-	printf ("nhap n=");
+	printf ("nhap n :");
 	scanf ("%d",&n);
-    int i=1;
-    int s;
+    int i=0;
+    int max =0;
     while (i<n){
-    	if (n%i==0);
-    	s+=i;
-    	i++;
+    	if (i%6==0){
+    		if (i>max){
+    			max=i;
+			}	
+		}
+		i++;
 	}
-	printf ("so lon nhat nho hon %d chia het cho 2 va 3 la: %d",s);
+	printf ("so chia het cho 2 va 3 lon nhat nho hon n la %d",max);
 }
